@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts</title>
+  <link rel="stylesheet" href="posts.css">
+</head>
+<body>
+  <div class="header">
+    <div class="theme-toggle-container">
+      <label for="themeToggleCheckbox" id="themeToggle">
+        <input type="checkbox" id="themeToggleCheckbox">
+        <span class="slider"></span>
+        <span class="theme-text">Dark</span>
+      </label>
+    </div>
+    <a href="index.html" class="back-link">Back to Create Post</a>
+  </div>
+
+  <h1>Posts</h1>
+  
+  <!-- Список постів -->
+  <ul id="postsList">
+     <li class="post-item" data-post-id="123">
+         <h2 contenteditable="true" class="post-title">Post Title</h2>
+         <p contenteditable="true" class="post-description">Post description</p>
+         <button class="edit-button" onclick="editPost(123)">Edit</button>
+         <button class="delete-button" onclick="deletePost(123)">Delete</button>
+     </li>
+  </ul>
+
+  <script src="dark.js"></script>
+  <script src="fetchPosts.js"></script>
+  <script src="script.js"></script>
+  <script src="post.js"></script>
+</body>
+</html>

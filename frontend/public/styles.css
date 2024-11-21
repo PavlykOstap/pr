@@ -1,0 +1,232 @@
+/* Загальні стилі */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  /* Темна тема */
+body.dark-mode {
+    background-color: #2e2e2e;
+    color: #f1f1f1; /* Білий текст для всього тіла */
+}
+
+/* Додаткові стилі для темної теми */
+body.dark-mode h1,
+body.dark-mode p,
+body.dark-mode li {
+    color: #f1f1f1; /* Білий текст для заголовків, абзаців та списків */
+}
+
+/* Текст для кнопок в темній темі */
+body.dark-mode button {
+    color: white;
+}
+
+/* Фон постів для темної теми */
+body.dark-mode #postsList li {
+    background-color: #444;
+}
+
+/* Тема для перемикача */
+body.dark-mode .slider {
+    background-color: #4CAF50;
+}
+
+body.dark-mode .slider:before {
+    background-color: #fff; /* Білий круг для перемикача */
+}
+
+  
+  /* Навігація */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  nav .theme-toggle-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Перемикач теми */
+  .theme-toggle-container label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .theme-toggle-container input[type="checkbox"] {
+    display: none;
+  }
+  
+  .theme-toggle-container .slider {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 24px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle-container input[type="checkbox"]:checked + .slider {
+    background-color: #4CAF50;
+  }
+  
+  .theme-toggle-container .slider:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+  }
+  
+  .theme-toggle-container input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /* Список постів */
+  #postsList {
+    list-style: none;
+    padding: 0;
+    margin: 80px auto 20px;
+    max-width: 600px;
+  }
+  
+  #postsList li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  #postsList li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  #postsList li.dark-mode {
+    background-color: #444;
+  }
+  
+  #postsList h2 {
+    margin: 0 0 10px;
+  }
+  
+  #postsList p {
+    margin: 0;
+  }
+  
+  /* Кнопка "Back to Create Post" */
+  .posts-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .posts-link:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .posts-link:active {
+    background-color: #388E3C;
+  }
+  
+  
+  
+  /* Форма для створення постів */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  form input:focus, form button:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Адаптивний дизайн */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav a {
+      margin: 5px 0;
+    }
+  
+    form {
+      width: 90%;
+    }
+  }
+  
+  

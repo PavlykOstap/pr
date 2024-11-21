@@ -1,0 +1,210 @@
+/* Загальні стилі для posts.html */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Темна тема */
+body.dark-mode {
+    background-color: #2e2e2e;
+    color: #f1f1f1; /* Білий текст для всього тіла */
+}
+
+/* Додаткові стилі для темної теми */
+body.dark-mode h1,
+body.dark-mode p,
+body.dark-mode li {
+    color: #f1f1f1; /* Білий текст для заголовків, абзаців та списків */
+}
+
+/* Текст для кнопок в темній темі */
+body.dark-mode button {
+    color: white;
+}
+
+/* Фон постів для темної теми */
+body.dark-mode #postsList li {
+    background-color: #444;
+}
+
+/* Тема для перемикача */
+body.dark-mode .slider {
+    background-color: #4CAF50;
+}
+
+body.dark-mode .slider:before {
+    background-color: #fff; /* Білий круг для перемикача */
+}
+
+
+/* Стилі для елементів в темній темі */
+#postsList li.dark-mode {
+    background-color: #444;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+#postsList {
+    list-style: none;
+    padding: 0;
+    margin: 80px auto 20px;
+    max-width: 600px;
+}
+
+#postsList li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#postsList li:hover {
+    background-color: #f0f0f0;
+}
+
+.posts-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.posts-link:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.posts-link:active {
+    background-color: #388E3C;
+}
+
+/* Стилі для кнопки "Back to Create Post" */
+.back-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.back-link:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.back-link:active {
+    background-color: #388E3C;
+}
+
+nav .theme-toggle-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Перемикач теми */
+  .theme-toggle-container label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .theme-toggle-container input[type="checkbox"] {
+    display: none;
+  }
+  
+  .theme-toggle-container .slider {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 24px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle-container input[type="checkbox"]:checked + .slider {
+    background-color: #4CAF50;
+  }
+  
+  .theme-toggle-container .slider:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+  }
+  
+  .theme-toggle-container input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  
+/* Стилі для кнопок редагування, збереження та видалення */
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.save-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.save-button:hover {
+    background-color: #45a049;
+}
+
+button.edit-button {
+    background-color: #008CBA;
+    color: white;
+}
+
+button.edit-button:hover {
+    background-color: #007B9A;
+}
+
+button.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+button.delete-button:hover {
+    background-color: #e53935;
+}
